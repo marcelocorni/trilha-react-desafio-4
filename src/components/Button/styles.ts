@@ -10,8 +10,11 @@ export const ButtonContainer = styled.button`
     border: 1px solid #81259D;
     border-radius: 21px;
 
+    background-color: ${props => (props.disabled ? '#fff' : '#81259D')};
+    color: ${props => (props.disabled ? '#81259D' : '#fff')};
+
     &:hover {
-        opacity: 0.6;
-        cursor:pointer;
+        opacity: ${props => (props.disabled ? 1 : 0.6)};
+        cursor: ${props => (props.disabled ? 'not-allowed' : 'hand')};
     }
 `
